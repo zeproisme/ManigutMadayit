@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@drawable/main">
+
+
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:gravity="center"
+        android:layout_marginStart="340dp"
+
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15dp">
+        <Button
+            android:layout_width="wrap_content"
+            style="@style/OnlyIcon"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/baseline_density_medium_24"/>
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <Button
+        android:id="@+id/specDay"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="95dp"
+        android:layout_marginEnd="260dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:backgroundTint="@android:color/darker_gray"
+        android:text="ימי שיא"/>
+    <Button
+        android:id="@+id/sub"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="95dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:backgroundTint="@android:color/darker_gray"
+        android:text="בקשת מחליף "/>
+    <Button
+        android:id="@+id/specTeam"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="95dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:backgroundTint="@android:color/darker_gray"
+        android:text="בקשת צוות "/>
+
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:text="logout"
+
+        android:gravity="center"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="635dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="50dp"/>
+    <TextView
+        android:id="@+id/loggedIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="logged in"
+        android:textSize="25dp"
+        android:gravity="center"
+
+        android:layout_marginTop="600dp"
+
+        android:layout_marginBottom="50dp"
+        android:textColor="@color/white"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shared preferances"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="50dp"
+        android:id="@+id/SharedPrefs"
+        android:gravity="center"
+        android:backgroundTint="@android:color/holo_orange_light"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="המוקד שלי"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="220dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/MyBranch"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:gravity="center"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="מערכים"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="220dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/lessonPlans"
+        android:backgroundTint="@android:color/holo_blue_bright"
+        android:gravity="center"/>
+
+</RelativeLayout>
