@@ -1,5 +1,6 @@
 package com.example.manigutmadayit;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -15,7 +16,7 @@ public class SharedPreference extends AppCompatActivity {
     private EditText editText;
     private Button applyTextButton;
     private Button saveButton;
-
+    private Button back;
     public static final String SHARED_PREFS = "mypref";
     public static final String TEXT = "text";
 
@@ -32,6 +33,7 @@ public class SharedPreference extends AppCompatActivity {
         textView = findViewById(R.id.textViewPref);
         applyTextButton = findViewById(R.id.applypref);
         saveButton = findViewById(R.id.savepref);
+        back = findViewById(R.id.backbutton);
 
         applyTextButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +50,15 @@ public class SharedPreference extends AppCompatActivity {
         });
         loadData();
         updateViews();
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
     }
     public void saveData(){

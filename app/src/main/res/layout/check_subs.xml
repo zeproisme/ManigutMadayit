@@ -35,5 +35,18 @@
         android:gravity="center"
         android:backgroundTint="@android:color/holo_blue_bright"
         android:text="upload image"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:text="Back"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@android:color/background_dark"
+        android:gravity="center"
+        android:id="@+id/backbutton">
+
+    </Button>
+
 
 </RelativeLayout>

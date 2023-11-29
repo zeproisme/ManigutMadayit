@@ -24,12 +24,14 @@ public class FBStorage extends AppCompatActivity {
     TextInputEditText editTextFile;
     StorageReference reference;
     FirebaseDatabase database;
+    Button back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fire_base_storage);
         btnave = findViewById(R.id.txtFile);
+        back = findViewById(R.id.backbutton);
         editTextFile = findViewById(R.id.txt);
         reference = FirebaseStorage.getInstance().getReference().child("Document");
 
@@ -48,6 +50,15 @@ public class FBStorage extends AppCompatActivity {
                         Toast.makeText(FBStorage.this, e.toString(), Toast.LENGTH_SHORT).show();
                     }
                 });
+            }
+        });
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+
             }
         });
 

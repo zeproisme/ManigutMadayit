@@ -4,6 +4,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/manigut_login">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:text="Back"
+
+        android:backgroundTint="@android:color/background_dark"
+        android:gravity="center"
+        android:id="@+id/backbutton"/>
 
     <TextView
         android:id="@+id/textViewPref"
@@ -42,4 +51,5 @@
         android:layout_height="wrap_content"
         android:text="save data"
         android:layout_gravity="center_horizontal"></Button>
+
 </LinearLayout>

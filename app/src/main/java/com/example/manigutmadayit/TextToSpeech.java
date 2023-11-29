@@ -1,5 +1,6 @@
 package com.example.manigutmadayit;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,6 +18,7 @@ public class TextToSpeech extends AppCompatActivity {
     private SeekBar mSeekBarPitch;
     private SeekBar mSeekBarSpeed;
     private Button mButtonSpeak;
+    private Button back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -26,6 +28,7 @@ public class TextToSpeech extends AppCompatActivity {
         mSeekBarPitch = findViewById(R.id.seek_bar_pitch);
         mSeekBarSpeed = findViewById(R.id.seek_bar_speed);
         mButtonSpeak = findViewById(R.id.button_speak);
+        back = findViewById(R.id.backbutton);
         mTTS = new android.speech.tts.TextToSpeech(this, new android.speech.tts.TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
@@ -40,6 +43,15 @@ public class TextToSpeech extends AppCompatActivity {
                 }else{
                     Log.e("TTS","Initialization failed");
                 }
+            }
+        });
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
         mButtonSpeak.setOnClickListener(new View.OnClickListener() {

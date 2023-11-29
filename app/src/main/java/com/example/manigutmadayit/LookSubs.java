@@ -34,6 +34,7 @@ public class LookSubs extends AppCompatActivity  {
     TextView textViewSubs;
     Button selectImage;
     Button uploadImage;
+    Button back;
     Uri imageUri;
     ImageView imageView;
     StorageReference storageReference;
@@ -46,6 +47,7 @@ public class LookSubs extends AppCompatActivity  {
         selectImage = findViewById(R.id.selectImagebtn);
         imageView = findViewById(R.id.imageview1);
         uploadImage = findViewById(R.id.uploadImage);
+        back = findViewById(R.id.backbutton);
         selectImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,10 +56,21 @@ public class LookSubs extends AppCompatActivity  {
         });
 
 
+
         uploadImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 uploadImage();
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
 
