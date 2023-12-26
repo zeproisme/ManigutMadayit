@@ -123,4 +123,16 @@
         android:backgroundTint="@android:color/holo_blue_bright"
         android:gravity="center"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RTB"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="50dp"
+        android:id="@+id/RealTimeDataBase"
+        android:backgroundTint="@android:color/holo_purple"
+        android:gravity="center"/>
+
 </RelativeLayout>

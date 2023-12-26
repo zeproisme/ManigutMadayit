@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseUser user;
     Button lessons;
     Button sharedprefs;
+    Button RTB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         branch = findViewById(R.id.MyBranch);
         lessons = findViewById(R.id.lessonPlans);
         substitute = findViewById(R.id.sub);
+        RTB = findViewById(R.id.RealTimeDataBase);
         user = auth.getCurrentUser();
 
         if(user == null){
@@ -67,6 +69,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(getApplicationContext(), SharedPreference.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        RTB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("abc","hello");
+                Intent intent = new Intent(getApplicationContext(), RealTimeDataBase.class);
+                Log.d("bca","hi");
                 startActivity(intent);
                 finish();
             }
