@@ -57,6 +57,18 @@
             android:exported="false"
             android:label="@string/title_activity_registration"
             android:theme="@style/Theme.Material3.Light.NoActionBar" />
+
+        <activity
+            android:name=".RealTimeDataBase"
+            android:exported="false"
+            android:label="@string/title_activity_registration"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+
+        <activity
+            android:name=".UploadActivity"
+            android:exported="false"
+            android:label="@string/title_activity_registration"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
     </application>
 
 </manifest>

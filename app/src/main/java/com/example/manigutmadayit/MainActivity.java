@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), RealTimeDataBase.class);
                 Log.d("bca","hi");
                 startActivity(intent);
+                Log.d("bcaddd","hii");
                 finish();
             }
         });
