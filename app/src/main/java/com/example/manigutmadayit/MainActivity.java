@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     Button button;
     Button branch;
     Button substitute;
+    Button RTB;
     TextView textView;
     FirebaseUser user;
     Button lessons;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         button = findViewById(R.id.logout);
+        RTB = findViewById(R.id.RealTimeDatabase);
         textView = findViewById(R.id.loggedIn);
         sharedprefs = findViewById(R.id.SharedPrefs);
         branch = findViewById(R.id.MyBranch);
@@ -58,6 +60,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(getApplicationContext(), LookSubs.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        RTB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(), RealTimeDataBase.class);
                 startActivity(intent);
                 finish();
             }
