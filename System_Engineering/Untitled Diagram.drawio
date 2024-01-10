@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-01-09T10:17:40.009Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="wjxwDsFDe1hDAKirCBPo" version="22.1.17" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-10T08:30:43.035Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="PHntA1wg3FwaMpcML3aG" version="22.1.18" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1434" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -27,11 +27,6 @@
         </mxCell>
         <mxCell id="PMqjCPG8gLF7dpGkGm9a-13" value="My Lesson Plans" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="371" y="680" width="80" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="PPMk6yg8GGWXCZKKE9Ad-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="PMqjCPG8gLF7dpGkGm9a-15">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="760" y="560" as="targetPoint" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="PMqjCPG8gLF7dpGkGm9a-15" value="Create Event&lt;br&gt;(admin only)" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="560" y="520" width="80" height="80" as="geometry" />
@@ -84,14 +79,20 @@
             <mxPoint x="440" y="560" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="PPMk6yg8GGWXCZKKE9Ad-0" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="PMqjCPG8gLF7dpGkGm9a-2" target="PMqjCPG8gLF7dpGkGm9a-0">
+        <mxCell id="PPMk6yg8GGWXCZKKE9Ad-0" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="PMqjCPG8gLF7dpGkGm9a-2" target="PMqjCPG8gLF7dpGkGm9a-0" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="250" y="350" as="sourcePoint" />
             <mxPoint x="300" y="300" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="PPMk6yg8GGWXCZKKE9Ad-2" value="Add Description to Event" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="760" y="530" width="120" height="60" as="geometry" />
+        <mxCell id="PPMk6yg8GGWXCZKKE9Ad-2" value="Add Description to Event" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="700" y="530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="maQbZOocJPjG21al_bmQ-0" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="PMqjCPG8gLF7dpGkGm9a-15" target="PPMk6yg8GGWXCZKKE9Ad-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="542" as="sourcePoint" />
+            <mxPoint x="700" y="537" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
