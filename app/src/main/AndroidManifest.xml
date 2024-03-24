@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:allowBackup="true"
@@ -66,6 +67,31 @@
 
         <activity
             android:name=".UploadActivity"
+            android:exported="false"
+            android:label="@string/title_activity_registration"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+        <activity
+            android:name=".RTB"
+            android:exported="false"
+            android:label="@string/title_activity_registration"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+        <activity
+            android:name=".Events"
+            android:exported="false"
+            android:label="@string/title_activity_registration"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+        <activity
+            android:name=".EventDesc"
+            android:exported="false"
+            android:label="@string/title_activity_registration"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+        <activity
+            android:name=".DetailActivity"
+            android:exported="false"
+            android:label="@string/title_activity_registration"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+        <activity
+            android:name=".UpdateActivity"
             android:exported="false"
             android:label="@string/title_activity_registration"
             android:theme="@style/Theme.Material3.Light.NoActionBar" />
