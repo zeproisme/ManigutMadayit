@@ -39,7 +39,7 @@
         android:layout_marginBottom="30dp"
         android:gravity="center"
         android:backgroundTint="@android:color/darker_gray"
-        android:text="ימי שיא"/>
+        android:text=""/>
     <Button
         android:id="@+id/sub"
         android:layout_width="match_parent"
@@ -50,7 +50,7 @@
         android:layout_marginBottom="30dp"
         android:gravity="center"
         android:backgroundTint="@android:color/darker_gray"
-        android:text="בקשת מחליף "/>
+        android:text=" "/>
     <Button
         android:id="@+id/specTeam"
         android:layout_width="match_parent"
@@ -61,7 +61,7 @@
         android:layout_marginBottom="30dp"
         android:gravity="center"
         android:backgroundTint="@android:color/darker_gray"
-        android:text="בקשת צוות "/>
+        android:text=" "/>
 
 
     <Button
@@ -92,12 +92,12 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Shared preferances"
+        android:text="צוותים מיוחדים"
         android:layout_marginStart="220dp"
         android:layout_marginTop="150dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="50dp"
-        android:id="@+id/SharedPrefs"
+        android:id="@+id/special"
         android:gravity="center"
         android:backgroundTint="@android:color/holo_orange_light"/>
     <Button
@@ -122,28 +122,18 @@
         android:id="@+id/lessonPlans"
         android:backgroundTint="@android:color/holo_blue_bright"
         android:gravity="center"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="RealTimeDatabase"
-        android:layout_marginStart="250dp"
-        android:layout_marginTop="250dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="10dp"
-        android:id="@+id/RealTimeDatabase"
-        android:backgroundTint="@android:color/holo_blue_bright"
-        android:gravity="center"/>
+
 
     <Button
+        android:id="@+id/RealTimeDataBase"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="RTB"
         android:layout_marginStart="220dp"
         android:layout_marginTop="250dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="50dp"
-        android:id="@+id/RealTimeDataBase"
         android:backgroundTint="@android:color/holo_purple"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:text="אירועים קרבים" />
 
 </RelativeLayout>

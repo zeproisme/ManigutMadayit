@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     TextView textView;
     FirebaseUser user;
     Button lessons;
-    Button sharedprefs;
+    Button specialT;
     Button RTB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         events = findViewById(R.id.specDay);
         button = findViewById(R.id.logout);
         textView = findViewById(R.id.loggedIn);
-        sharedprefs = findViewById(R.id.SharedPrefs);
+        specialT = findViewById(R.id.special);
         branch = findViewById(R.id.MyBranch);
         lessons = findViewById(R.id.lessonPlans);
         substitute = findViewById(R.id.sub);
@@ -81,11 +81,11 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });*/
-        sharedprefs.setOnClickListener(new View.OnClickListener() {
+        specialT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getApplicationContext(), SharedPreference.class);
+                Intent intent = new Intent(getApplicationContext(), SpecialTeams.class);
                 startActivity(intent);
                 finish();
             }
