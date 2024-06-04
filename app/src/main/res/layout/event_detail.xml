@@ -47,6 +47,17 @@
         android:id="@+id/detailDesc"
         android:textSize="18sp"
         android:textColor="@color/lavender"/>
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:backgroundTint="@android:color/background_dark"
+        android:gravity="center"
+        android:text="Sign up" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

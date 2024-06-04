@@ -9,5 +9,10 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="red">#c70000</color>
+    <color name="gray">#808080</color>
     <color name="green">#00ff00</color>
+
+        <color name="dark_green">#006400</color>
+
+
 </resources>

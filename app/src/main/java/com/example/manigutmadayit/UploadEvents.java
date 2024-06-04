@@ -26,20 +26,21 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import java.text.DateFormat;
 import java.util.Calendar;
-public class UploadActivity extends AppCompatActivity {
+public class UploadEvents extends AppCompatActivity {
     ImageView uploadImage;
     Button saveButton;
-    EditText uploadTopic, uploadDesc, uploadLang;
+    EditText uploadTopic, uploadDesc, uploadDate, uploadLocation;
     String imageURL;
     Uri uri;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_upload);
+        setContentView(R.layout.event_upload);
         uploadImage = findViewById(R.id.uploadImage);
         uploadDesc = findViewById(R.id.uploadDesc);
         uploadTopic = findViewById(R.id.uploadTopic);
-        uploadLang = findViewById(R.id.uploadLang);
+        uploadLocation = findViewById(R.id.uploadLocation);
+        uploadDate = findViewById(R.id.uploadLang);
         saveButton = findViewById(R.id.saveButton);
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
@@ -51,7 +52,7 @@ public class UploadActivity extends AppCompatActivity {
                             uri = data.getData();
                             uploadImage.setImageURI(uri);
                         } else {
-                            Toast.makeText(UploadActivity.this, "No Image Selected", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(UploadEvents.this, "No Image Selected", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
@@ -74,7 +75,7 @@ public class UploadActivity extends AppCompatActivity {
     public void saveData(){
         StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("Android Images")
                 .child(uri.getLastPathSegment());
-        AlertDialog.Builder builder = new AlertDialog.Builder(UploadActivity.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(UploadEvents.this);
         builder.setCancelable(false);
         builder.setView(R.layout.progress_layout);
         AlertDialog dialog = builder.create();
@@ -99,8 +100,9 @@ public class UploadActivity extends AppCompatActivity {
     public void uploadData(){
         String title = uploadTopic.getText().toString();
         String desc = uploadDesc.getText().toString();
-        String lang = uploadLang.getText().toString();
-        DataClass dataClass = new DataClass(title, desc, lang, imageURL);
+        String date = uploadDate.getText().toString();
+        String location = uploadLocation.getText().toString();
+        EventDataClass dataClass = new EventDataClass(title, desc, date, imageURL, location);
         //We are changing the child from title to currentDate,
         // because we will be updating title as well and it may affect child value.
         String currentDate = DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
@@ -109,7 +111,7 @@ public class UploadActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()){
-                            Toast.makeText(UploadActivity.this, "Saved", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(UploadEvents.this, "Saved", Toast.LENGTH_SHORT).show();
                             /*Intent intent = new Intent(UploadActivity.this, RealTimeDataBase.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             startActivity(intent);*/
@@ -119,7 +121,7 @@ public class UploadActivity extends AppCompatActivity {
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(UploadActivity.this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(UploadEvents.this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
                     }
                 });
     }

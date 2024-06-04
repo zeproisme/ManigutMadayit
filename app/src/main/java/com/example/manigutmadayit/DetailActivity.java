@@ -23,7 +23,7 @@ public class DetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.real_time_detail);
+        setContentView(R.layout.event_detail);
         detailDesc = findViewById(R.id.detailDesc);
         detailImage = findViewById(R.id.detailImage);
         detailTitle = findViewById(R.id.detailTitle);
@@ -50,7 +50,7 @@ public class DetailActivity extends AppCompatActivity {
                     public void onSuccess(Void unused) {
                         reference.child(key).removeValue();
                         Toast.makeText(DetailActivity.this, "Deleted", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        startActivity(new Intent(getApplicationContext(), Home.class));
                         finish();
                     }
                 });
@@ -59,7 +59,7 @@ public class DetailActivity extends AppCompatActivity {
         editButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(DetailActivity.this, UpdateActivity.class)
+                Intent intent = new Intent(DetailActivity.this, UpdateEvents.class)
                         .putExtra("Title", detailTitle.getText().toString())
                         .putExtra("Description", detailDesc.getText().toString())
                         .putExtra("Language", detailLang.getText().toString())

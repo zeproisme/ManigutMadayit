@@ -13,21 +13,21 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
-public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
+public class EventsAdapter extends RecyclerView.Adapter<EventsViewHolder> {
     private Context context;
-    private List<DataClass> dataList;
-    public MyAdapter(Context context, List<DataClass> dataList) {
+    private List<EventDataClass> dataList;
+    public EventsAdapter(Context context, List<EventDataClass> dataList) {
         this.context = context;
         this.dataList = dataList;
     }
     @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public EventsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_item, parent, false);
-        return new MyViewHolder(view);
+        return new EventsViewHolder(view);
     }
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull EventsViewHolder holder, int position) {
         Glide.with(context).load(dataList.get(position).getDataImage()).into(holder.recImage);
         holder.recTitle.setText(dataList.get(position).getDataTitle());
         holder.recDesc.setText(dataList.get(position).getDataDesc());
@@ -52,16 +52,16 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     public int getItemCount() {
         return dataList.size();
     }
-    public void searchDataList(ArrayList<DataClass> searchList){
+    public void searchDataList(ArrayList<EventDataClass> searchList){
         dataList = searchList;
         notifyDataSetChanged();
     }
 }
-class MyViewHolder extends RecyclerView.ViewHolder{
+class EventsViewHolder extends RecyclerView.ViewHolder{
     ImageView recImage;
     TextView recTitle, recDesc, recLang;
     CardView recCard;
-    public MyViewHolder(@NonNull View itemView) {
+    public EventsViewHolder(@NonNull View itemView) {
         super(itemView);
         recImage = itemView.findViewById(R.id.recImage);
         recCard = itemView.findViewById(R.id.recCard);

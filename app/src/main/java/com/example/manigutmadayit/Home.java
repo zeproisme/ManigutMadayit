@@ -1,6 +1,5 @@
 package com.example.manigutmadayit;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,21 +8,17 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
-public class MainActivity extends AppCompatActivity {
+public class Home extends AppCompatActivity {
 
     FirebaseAuth auth;
     Button events;
-    Button button;
+    Button logout;
     Button branch;
+    Button admin;
     Button substitute;
     TextView textView;
     FirebaseUser user;
@@ -33,12 +28,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.home);
         //FirebaseDatabase database = FirebaseDatabase.getInstance("https://manigut-madayit-default-rtdb.europe-west1.firebasedatabase.app");
         //DatabaseReference myRef = database.getReference("message");
         auth = FirebaseAuth.getInstance();
         events = findViewById(R.id.specDay);
-        button = findViewById(R.id.logout);
+        admin = findViewById(R.id.admins);
+        logout = findViewById(R.id.logout);
         textView = findViewById(R.id.loggedIn);
         specialT = findViewById(R.id.special);
         branch = findViewById(R.id.MyBranch);
@@ -46,6 +42,15 @@ public class MainActivity extends AppCompatActivity {
         substitute = findViewById(R.id.sub);
         RTB = findViewById(R.id.RealTimeDataBase);
         user = auth.getCurrentUser();
+        Button showNotificationsButton = findViewById(R.id.showNotifications);
+        CheckAdmin.checkAdminAndSetVisibility(this, admin);
+        showNotificationsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               // showNotificationList();
+            }
+        });
+
 
         if(user == null){
             Intent intent = new Intent(getApplicationContext(), Login.class);
@@ -55,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         else{
             textView.setText(user.getEmail());
         }
-        button.setOnClickListener(new View.OnClickListener() {
+        logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
@@ -67,8 +72,51 @@ public class MainActivity extends AppCompatActivity {
         branch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /*public void changeBranch(){
+                    String branchName = user.getBranch();
 
-                Intent intent = new Intent(getApplicationContext(), LookSubs.class);
+
+                        switch(branchName) {
+                        case "a":
+                            System.out.println("Input is 'a'");
+                            break;
+                        case "b":
+                            System.out.println("Input is 'b'");
+                            break;
+                        case "c":
+                            System.out.println("Input is 'c'");
+                            break;
+                        case "d":
+                            System.out.println("Input is 'd'");
+                            break;
+                        case "e":
+                            System.out.println("Input is 'e'");
+                            break;
+                        case "f":
+                            System.out.println("Input is 'f'");
+                            break;
+                        case "g":
+                            System.out.println("Input is 'g'");
+                            break;
+                        case "h":
+                            System.out.println("Input is 'h'");
+                            break;
+                        case "i":
+                            System.out.println("Input is 'i'");
+                            break;
+                        case "j":
+                            System.out.println("Input is 'j'");
+                            break;
+                        default:
+                            System.out.println("Input not recognized");
+                            }
+                    }*/
+
+
+
+
+
+                Intent intent = new Intent(getApplicationContext(), Branch.class);
                 startActivity(intent);
                 finish();
             }
@@ -94,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.d("abc","hello");
-                Intent intent = new Intent(getApplicationContext(), RealTimeDataBase.class);
+                Intent intent = new Intent(getApplicationContext(), Events.class);
                 Log.d("bca","hi");
                 startActivity(intent);
                 Log.d("bcaddd","hii");
@@ -107,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getApplicationContext(), TextToSpeech.class);
+                Intent intent = new Intent(getApplicationContext(), LessonPlans.class);
                 startActivity(intent);
                 finish();
             }
@@ -117,7 +165,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.d("abc","hello");
 
-                Intent intent = new Intent(getApplicationContext(), FBStorage.class);
+                Intent intent = new Intent(getApplicationContext(), LessonPlans.class);
+                Log.d("bca","hi");
+                startActivity(intent);
+                finish();
+            }
+        });
+        admin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("abc","hello");
+
+                Intent intent = new Intent(getApplicationContext(), AdminUpdate.class);
                 Log.d("bca","hi");
                 startActivity(intent);
                 finish();
@@ -126,5 +185,9 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
+
     }
+
 }

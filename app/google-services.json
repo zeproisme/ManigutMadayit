@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "1019561131304",
+    "firebase_url": "https://manigut-madayit-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "manigut-madayit",
     "storage_bucket": "manigut-madayit.appspot.com"
   },
@@ -12,7 +13,20 @@
           "package_name": "com.example.manigutmadayit"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1019561131304-up2qvedose6mnv186ekhdderifffm70v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.manigutmadayit",
+            "certificate_hash": "6f791b640e85a52ababbe5f46d3ba366e6b764b0"
+          }
+        },
+        {
+          "client_id": "1019561131304-bj48l6hljgji5i13ambjcinfb6pq1b33.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyATd2QSNXQPgI40cHUR3Qp3QLxbrsxgwZM"
@@ -20,7 +34,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1019561131304-bj48l6hljgji5i13ambjcinfb6pq1b33.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

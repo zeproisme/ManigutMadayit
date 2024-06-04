@@ -5,6 +5,9 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
+
+
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -32,12 +35,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".Home"
             android:exported="true">
 
         </activity>
         <activity
-            android:name=".FBStorage"
+            android:name=".LessonPlans"
             android:exported="false"
             android:label="@string/title_activity_registration"
             android:theme="@style/Theme.Material3.Light.NoActionBar" />
@@ -54,19 +57,19 @@
             android:label="@string/title_activity_registration"
             android:theme="@style/Theme.Material3.Light.NoActionBar" />
         <activity
-            android:name=".SharedPreference"
+            android:name=".Branch"
             android:exported="false"
             android:label="@string/title_activity_registration"
             android:theme="@style/Theme.Material3.Light.NoActionBar" />
 
         <activity
-            android:name=".RealTimeDataBase"
+            android:name=".Events"
             android:exported="false"
             android:label="@string/title_activity_registration"
             android:theme="@style/Theme.Material3.Light.NoActionBar" />
 
         <activity
-            android:name=".UploadActivity"
+            android:name=".UploadEvents"
             android:exported="false"
             android:label="@string/title_activity_registration"
             android:theme="@style/Theme.Material3.Light.NoActionBar" />
@@ -96,7 +99,27 @@
             android:label="@string/title_activity_registration"
             android:theme="@style/Theme.Material3.Light.NoActionBar" />
         <activity
-            android:name=".UpdateActivity"
+            android:name=".UploadDocx"
+            android:exported="false"
+            android:label="@string/title_activity_registration"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+        <activity
+            android:name=".AdminUpdate"
+            android:exported="false"
+            android:label="@string/title_activity_registration"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+        <activity
+            android:name=".UpdateEvents"
+            android:exported="false"
+            android:label="@string/title_activity_registration"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+        <activity
+            android:name=".LessonPlansFileAdapter"
+            android:exported="false"
+            android:label="@string/title_activity_registration"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+        <activity
+            android:name=".LessonPlansFileModel"
             android:exported="false"
             android:label="@string/title_activity_registration"
             android:theme="@style/Theme.Material3.Light.NoActionBar" />
