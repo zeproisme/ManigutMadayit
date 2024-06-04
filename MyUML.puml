@@ -1,0 +1,341 @@
+@startuml
+class com.example.manigutmadayit.SpecialTeams {
+- Button chemistry
+- Button physics
+- Button media
+- Button astronomy
+- Button back
+# void onCreate(Bundle)
+}
+
+
+class com.example.manigutmadayit.UpdateActivity {
+~ ImageView updateImage
+~ Button updateButton
+~ EditText updateDesc
+~ String title
+~ String imageUrl
+~ String key
+~ Uri uri
+~ DatabaseReference databaseReference
+~ StorageReference storageReference
+# void onCreate(Bundle)
++ void saveData()
++ void updateData()
+}
+
+
+class com.example.manigutmadayit.FileModel {
+- String fileName
+- String fileUrl
+- String fileType
++ String getFileName()
++ void setFileName(String)
++ String getFileUrl()
++ void setFileUrl(String)
++ String getFileType()
++ void setFileType(String)
+}
+
+
+class com.example.manigutmadayit.User {
++ String email
++ String role
+}
+
+class com.example.manigutmadayit.Branch {
+- TextView textView
+- EditText editTextName
+- Button applyTextButton
+- Button saveButton
+- Button back
++ {static} String SHARED_PREFS
++ {static} String NAME
++ {static} String LESSON
++ {static} String BR_EQUIP
++ {static} String RET_EQUIP
+- String name
+- String lesson
+- String brEquip
+- String retEquip
+# void onCreate(Bundle)
++ void saveData()
++ void loadData()
++ void updateViews()
+}
+
+
+class com.example.manigutmadayit.Login {
+~ TextInputEditText editTextEmail
+~ Button buttonLogin
+~ FirebaseAuth mAuth
+~ TextView textView
++ void onStart()
+# void onCreate(Bundle)
+}
+
+
+class com.example.manigutmadayit.AdminUpdate {
+- DatabaseReference mDatabase
+# void onCreate(Bundle)
+- void fetchUserIdByEmailAndUpdateRole(String,String)
+- void updateUserRole(String,String)
+}
+
+
+class com.example.manigutmadayit.UploadDocx {
+~ FloatingActionButton fab
+~ DatabaseReference databaseReference
+~ ValueEventListener eventListener
+~ RecyclerView recyclerView
+~ List<DataClass> dataList
+~ MyAdapter adapter
+~ SearchView searchView
+# void onCreate(Bundle)
++ void searchList(String)
+}
+
+
+class com.example.manigutmadayit.Order {
+- String orderName
+- String orderStatus
++ String getOrderName()
++ void setOrderName(String)
++ String getOrderStatus()
++ void setOrderStatus(String)
+}
+
+
+class com.example.manigutmadayit.DetailActivity {
+~ TextView detailDesc
+~ ImageView detailImage
+~ FloatingActionButton deleteButton
+~ String key
+~ String imageUrl
+# void onCreate(Bundle)
+}
+
+
+class com.example.manigutmadayit.RealTimeDataBase {
+~ FloatingActionButton fab
+~ DatabaseReference databaseReference
+~ ValueEventListener eventListener
+~ RecyclerView recyclerView
+~ List<DataClass> dataList
+~ MyAdapter adapter
+~ SearchView searchView
+# void onCreate(Bundle)
++ void searchList(String)
+}
+
+
+class com.example.manigutmadayit.item {
+~ String name
+~ String description
+~ String location
+~ int image
++ String getName()
++ void setName(String)
++ String getDescription()
++ void setDescription(String)
++ String getLocation()
++ void setLocation(String)
++ int getImage()
++ void setImage(int)
+}
+
+
+class com.example.manigutmadayit.Registration {
+~ TextInputEditText editTextEmail
+~ Button buttonReg
+~ FirebaseAuth mAuth
+~ FirebaseDatabase mDatabase
+~ TextView textView
++ void onStart()
+# void onCreate(Bundle)
+}
+
+
+class com.example.manigutmadayit.UploadActivity {
+~ ImageView uploadImage
+~ Button saveButton
+~ EditText uploadTopic
+~ String imageURL
+~ Uri uri
+# void onCreate(Bundle)
++ void saveData()
++ void uploadData()
+}
+
+
+class com.example.manigutmadayit.FileAdapter {
+- List<FileModel> fileList
+- OnItemClickListener listener
+- OnDeleteClickListener deleteListener
++ void setOnItemClickListener(OnItemClickListener)
++ void setOnDeleteClickListener(OnDeleteClickListener)
++ FileViewHolder onCreateViewHolder(ViewGroup,int)
++ void onBindViewHolder(FileViewHolder,int)
++ int getItemCount()
++ void setFileList(List<FileModel>)
+}
+
+
+interface com.example.manigutmadayit.FileAdapter$OnItemClickListener {
+~ void onItemClick(FileModel)
+}
+
+interface com.example.manigutmadayit.FileAdapter$OnDeleteClickListener {
+~ void onDeleteClick(FileModel)
+}
+
+class com.example.manigutmadayit.FileAdapter$FileViewHolder {
+- TextView textViewFileName
+- Button buttonDownload
+- ImageButton buttonDelete
++ void bind(FileModel,OnItemClickListener,OnDeleteClickListener)
+}
+
+
+class com.example.manigutmadayit.MainActivity {
+~ FirebaseAuth auth
+~ Button events
+~ Button logout
+~ Button branch
+~ Button admin
+~ Button substitute
+~ TextView textView
+~ FirebaseUser user
+~ Button lessons
+~ Button specialT
+~ Button RTB
+# void onCreate(Bundle)
+}
+
+
+class com.example.manigutmadayit.RTB {
+~ ImageView uploadImage
+~ Button saveButton
+~ EditText uploadTopic
+~ String imageURL
+~ Uri uri
+# void onCreate(Bundle)
+}
+
+
+class com.example.manigutmadayit.DataClass {
+- String dataTitle
+- String dataDesc
+- String dataDate
+- String dataImage
+- String dataLocation
+- String key
++ String getKey()
++ void setKey(String)
++ String getDataTitle()
++ String getDataLocation()
++ String getDataDesc()
++ String getDataLang()
++ String getDataImage()
+}
+
+
+class com.example.manigutmadayit.MyAdapter {
+- Context context
+- List<DataClass> dataList
++ MyViewHolder onCreateViewHolder(ViewGroup,int)
++ void onBindViewHolder(MyViewHolder,int)
++ int getItemCount()
++ void searchDataList(ArrayList<DataClass>)
+}
+
+
+class com.example.manigutmadayit.MyViewHolder {
+~ ImageView recImage
+~ TextView recTitle
+~ CardView recCard
+}
+
+class com.example.manigutmadayit.CheckAdmin {
++ {static} void checkAdminAndSetVisibility(Context,View)
+}
+
+class com.example.manigutmadayit.TextToSpeech {
+- android.speech.tts.TextToSpeech mTTS
+- EditText mEditText
+- SeekBar mSeekBarPitch
+- SeekBar mSeekBarSpeed
+- Button mButtonSpeak
+- Button back
+# void onCreate(Bundle)
+- void speak()
+# void onDestroy()
+}
+
+
+class com.example.manigutmadayit.LookSubs {
+~ TextView textViewSubs
+~ Button selectImage
+~ Button uploadImage
+~ Button back
+~ Uri imageUri
+~ ImageView imageView
+~ StorageReference storageReference
+# void onCreate(Bundle)
+- void uploadImage()
+- void selectImage()
+# void onActivityResult(int,int,Intent)
+}
+
+
+class com.example.manigutmadayit.FBStorage {
+- FloatingActionButton btnPickFile
+- Button back
+- Button btnDownloadFile
+- RecyclerView recyclerView
+- FileAdapter fileAdapter
+- StorageReference reference
+- DatabaseReference filesRef
+- ActivityResultLauncher<String> filePickerLauncher
+# void onCreate(Bundle)
+- void uploadFile(Uri,String)
+- void saveFileMetadata(String,String)
+- void showFileNameInputDialog(Uri)
+- void deleteFile(FileModel)
+- void startDownload(String,String)
+- void loadFileListFromFirebase()
+}
+
+
+class com.example.manigutmadayit.MarginItemDecorations {
+- int space
++ void getItemOffsets(Rect,View,RecyclerView,RecyclerView.State)
+}
+
+
+
+
+androidx.appcompat.app.AppCompatActivity <|-- com.example.manigutmadayit.SpecialTeams
+androidx.appcompat.app.AppCompatActivity <|-- com.example.manigutmadayit.UpdateActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.manigutmadayit.Branch
+androidx.appcompat.app.AppCompatActivity <|-- com.example.manigutmadayit.Login
+androidx.appcompat.app.AppCompatActivity <|-- com.example.manigutmadayit.AdminUpdate
+androidx.appcompat.app.AppCompatActivity <|-- com.example.manigutmadayit.UploadDocx
+androidx.appcompat.app.AppCompatActivity <|-- com.example.manigutmadayit.DetailActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.manigutmadayit.RealTimeDataBase
+androidx.appcompat.app.AppCompatActivity <|-- com.example.manigutmadayit.Registration
+androidx.appcompat.app.AppCompatActivity <|-- com.example.manigutmadayit.UploadActivity
+com.example.manigutmadayit.Adapter <|-- com.example.manigutmadayit.FileAdapter
+com.example.manigutmadayit.FileAdapter +.. com.example.manigutmadayit.FileAdapter$OnItemClickListener
+com.example.manigutmadayit.FileAdapter +.. com.example.manigutmadayit.FileAdapter$OnDeleteClickListener
+com.example.manigutmadayit.FileAdapter +.. com.example.manigutmadayit.FileAdapter$FileViewHolder
+com.example.manigutmadayit.ViewHolder <|-- com.example.manigutmadayit.FileAdapter$FileViewHolder
+androidx.appcompat.app.AppCompatActivity <|-- com.example.manigutmadayit.MainActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.manigutmadayit.RTB
+com.example.manigutmadayit.Adapter <|-- com.example.manigutmadayit.MyAdapter
+com.example.manigutmadayit.ViewHolder <|-- com.example.manigutmadayit.MyViewHolder
+androidx.appcompat.app.AppCompatActivity <|-- com.example.manigutmadayit.TextToSpeech
+androidx.appcompat.app.AppCompatActivity <|-- com.example.manigutmadayit.LookSubs
+androidx.appcompat.app.AppCompatActivity <|-- com.example.manigutmadayit.FBStorage
+com.example.manigutmadayit.ItemDecoration <|-- com.example.manigutmadayit.MarginItemDecorations
+@enduml

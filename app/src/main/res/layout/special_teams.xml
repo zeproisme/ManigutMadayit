@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Home"
+    android:background="@drawable/manigut_login">
+
+
+    <TextView
+        android:id="@+id/loggedIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SPECIAL TEAMS"
+        android:textSize="25dp"
+        android:gravity="center"
+
+        android:layout_marginTop="150dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="50dp"
+        android:textColor="@color/red"
+        />
+
+    <Button
+        android:id="@+id/chemistry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/design_default_color_on_secondary"
+        android:text="CHEMISTRY" />
+    <Button
+        android:id="@+id/physics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="270dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/design_default_color_on_secondary"
+        android:text="PHYSICS" />
+    <Button
+        android:id="@+id/astronomy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/design_default_color_on_secondary"
+        android:text="ASTRONOMY" />
+    <Button
+        android:layout_width="match_parent"
+
+        android:layout_height="40dp"
+
+        android:layout_marginTop="660dp"
+        android:layout_marginEnd="325dp"
+        android:layout_marginBottom="30dp"
+        android:text="Back"
+
+        android:backgroundTint="@android:color/background_dark"
+        android:gravity="center"
+        android:id="@+id/backbutton"/>
+    <Button
+        android:id="@+id/media"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/design_default_color_on_secondary"
+        android:text="MEDIA" />
+</RelativeLayout>
